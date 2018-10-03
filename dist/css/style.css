@@ -1,0 +1,50 @@
+body{
+    /*background: url('/TeaFactory/dist/images/4177bfe634caae0466833b66e803bbea.jpg') !important;*/
+    font-family: 'Source Sans Pro', sans-serif !important;
+    color: rgb(62, 86, 74) !important;
+    /*background-color: rgb(215, 242, 232) !important;*/
+
+}
+body img{
+    opacity: 0.2 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color: rgb(35, 198, 139) !important;
+}
+a {
+    color: rgb(35, 198, 139) !important;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.nav-pills .nav-link {
+    border-radius: 0px !important;
+}
+header{
+    height: 150px;
+    background-color: rgb(35, 198, 139) !important;
+}
+.tab-content{
+    /*background-image: url('/4177bfe634caae0466833b66e803bbea.jpg');*/
+    padding-left: 11em;
+    padding-right: 20em;
+
+}
+table thead {
+    background-color: rgb(35, 198, 139);
+    color: white;
+}
+table tbody tr:hover{
+    background-color: aquamarine !important;
+    color:white ;
+}
+.dropdown-item:hover{
+    cursor: pointer;
+}
+#loginDiv{
+
+    border: 2px solid rgb(35, 198, 139);
+    border-radius: 5px;
+}

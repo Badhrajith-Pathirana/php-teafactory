@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TeaFactory | Web</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+</head>
+<body>
+<header>
+
+</header>
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <h1>&nbsp;&nbsp;&nbsp;Menu</h1>
+                <!--<a class="nav-link active" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-home"></i> Dashboard</a>-->
+                <a class="nav-link active" id="v-pills-supplier-tab" data-toggle="pill" href="#v-pills-supplier" role="tab" aria-controls="v-pills-supplier" aria-selected="false"><i class="fas fa-user-alt"></i> Supplier</a>
+                <a class="nav-link" id="v-pills-teacollection-tab" data-toggle="pill" href="#v-pills-teacollection" role="tab" aria-controls="v-pills-teacollection" aria-selected="false"><i class="fas fa-suitcase"></i> Tea Collection</a>
+                <a class="nav-link" id="v-pills-debits-tab" data-toggle="pill" href="#v-pills-debits" role="tab" aria-controls="v-pills-debits" aria-selected="false"><i class="fas fa-hand-holding-usd"></i> Debits</a>
+                <a class="nav-link" id="v-pills-credits-tab" data-toggle="pill" href="#v-pills-credits" role="tab" aria-controls="v-pills-credits" aria-selected="false"><i class="fas fa-money-bill"></i> Credits</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-9">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!--<div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                </div>-->
+                <div class="tab-pane fade show active" id="v-pills-supplier" role="tabpanel" aria-labelledby="v-pills-supplier-tab">
+                    <br>
+                    <button type="button" class="btn btn-success" id="btnAddCustomer"><i class="fas fa-plus"></i> Add new Supplier</button>
+                    <br>
+                    <br>
+                    <div id="addSupplier">
+                        <form id="addSupplierForm">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtSupID">Supplier ID</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" name="txtSupID" id="txtSupID" placeholder="Supplier ID">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtSupName">Supplier Name</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" id="txtSupName" name="txtSupName" placeholder="Supplier Name">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtSupTel">Contact No</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" id="txtSupTel" name="txtSupTel" placeholder="Contact No">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtAddress">Address</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" id="txtAddress" name="txtAddress" placeholder="Address">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="cmbRoute">Route</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <div class="dropdown" id="cmbRoute">
+                                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Route</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="routeList">
+                                            <p class="dropdown-item" >Route</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" class="btn btn-success" id="btnAddSupplier">Add the supplier</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button" class="btn btn-light" id="btnResetSupplier">Reset</button>
+                            <br>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="col-12">
+                        <table class="table table-hover" id="tblSupplier">
+                            <thead>
+                            <tr>
+                                <th scope="col">Supplier ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Route</th>
+                                <th scope="col">Contact No</th>
+                                <th scope="col">Address</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-teacollection" role="tabpanel" aria-labelledby="v-pills-teacollection-tab">
+                    <br>
+                    <div id="divAddTeaColl">
+                        <h1>Add new Collection</h1>
+                        <br>
+                        <form>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="cmbSupplier">Supplier ID</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <div class="dropdown" id="cmbSupplier">
+                                        <button class="btn btn-light dropdown-toggle" type="button" id="dropDownSupplier" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Supplier</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownSupplier" id="supplierList">
+                                            <p class="dropdown-item" >Supplier</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtAkg">Grade A (kg)</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" name="txtAkg" id="txtAkg" placeholder="Grade A (kg)">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtBkg">Grade B (kg)</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" name="txtBkg" id="txtBkg" placeholder="Grade B (kg)">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-3 col-md-4"></div>
+                                <div class="col-6 col-md-4">
+                                    <button type="button" id="btnAddCollection" class="btn btn-success">Submit</button>
+                                    <button type="button" class="btn btn-light">Reset</button>
+                                </div>
+                                <div class="col-3 col-md-4"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <h1>
+                        Today Tea Collections
+                    </h1>
+                    <div class="col-12">
+                        <table class="table table-hover" id="tblTeaCollection">
+                            <thead>
+                            <tr>
+                                <th scope="col">Collection ID</th>
+                                <th scope="col">Supplier ID</th>
+                                <th scope="col">Supplier Name</th>
+                                <th scope="col">Grade A (Kg)</th>
+                                <th scope="col">Grade B (Kg)</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-debits" role="tabpanel" aria-labelledby="v-pills-debits-tab">
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10 col-md-3">
+                            <label for="cmbSupplier">Supplier ID</label>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-1"></div>
+                        <div class="col-10 col-md-5">
+
+                            <div class="dropdown" id="cmbDebSupplier">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropDownDebSupplier" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Supplier</button>
+                                <div class="dropdown-menu" aria-labelledby="dropDownSupplier" id="debsupplierList">
+                                    <p class="dropdown-item" >Supplier</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row" id="divTableDet">
+                        <br>
+                        <br>
+                        <h1>
+                            Debit Details
+                        </h1>
+                        <div class="col-12">
+                            <table class="table table-hover" id="tblDebits">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Debit ID</th>
+                                    <th scope="col">Collection ID</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-credits"  role="tabpanel" aria-labelledby="v-pills-credits-tab">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1>
+                        Today Credits
+                    </h1>
+                    <div>
+                        <form >
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="cmbCreditSupplier">Supplier ID</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <div class="dropdown" id="cmbCreditSupplier">
+                                        <button class="btn btn-light dropdown-toggle" type="button" id="dropDownCreditSupplier" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Supplier</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownCreditSupplier" id="creditsupplierList">
+                                            <p class="dropdown-item" >Supplier</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="cmbCtype">Credit Type</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <div class="dropdown" id="cmbCtype">
+                                        <button class="btn btn-light dropdown-toggle" type="button" id="dropDownCreditType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Credit Type</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropDownCreditType" id="credittypeList">
+                                            <p class="dropdown-item" >Credit Type</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-3">
+                                    <label for="txtAmount">Amount</label>
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col-1"></div>
+                                <div class="col-10 col-md-5">
+                                    <input class="form-control" type="text" name="txtAmount" id="txtAmount" placeholder="Amount">
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-3 col-md-4"></div>
+                                <div class="col-6 col-md-4">
+                                    <button type="button" id="btnAddCredit" class="btn btn-success">Submit</button>
+                                    <button type="button" class="btn btn-light">Reset</button>
+                                </div>
+                                <div class="col-3 col-md-4"></div>
+                            </div>
+                            <br>
+                            <br>
+                        </form>
+                    </div>
+                    <div class="col-12">
+                        <table class="table table-hover" id="tblCredits">
+                            <thead>
+                            <tr>
+                                <th scope="col">Credit ID</th>
+                                <th scope="col">Supplier ID</th>
+                                <th scope="col">Supplier Name</th>
+                                <th scope="col">Credit Type</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="dist/js/plugin/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="dist/js/controller/controller.js"></script>
+</body>
+</html>
